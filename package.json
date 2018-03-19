@@ -1,0 +1,23 @@
+{
+  "name": "nodejs_project",
+  "version": "1.0.0",
+  "description": "CS313 NodeJS project covering weeks 10-13",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "pg": "*",
+    "themeparks": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "www.github.com/damonsimpkinson/cs313-nodejs-project"
+  },
+  "author": "Damon Simpkinson",
+  "license": "ISC"
+}
