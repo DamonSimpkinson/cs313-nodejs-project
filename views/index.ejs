@@ -1,3 +1,37 @@
 <% include partials/header %>
-<h1>Welcome to the nodeJS project</h1>
-<% include partials/footer %>
+<body class="container">
+  <div class="jumbotron">
+    <h1>Damon Simpkinson's</h1>
+    <h1>CS313-NodeJS project</h1>
+    <h2><%= title %></h2>
+    <p>Select one of the radio buttons below to select a themepark.</p>
+    <p>Once selected, a list of available attractions will appear for you to
+      select from.  Select that attraction to find the current wait time for
+      that attractions queue.  All times are updated in real time and are the
+      same as the wait times that appear on the official "My Disney Experience"
+      app.  The themepark API provides wait times for many themeparks world wide
+      however, I am biased in favor of Walt Disney World (sorry Disneyland) so
+      those parks are the only parks that will be appearing in this app.</p>
+  </div>
+  <div id="parkSelect">
+    <div class="radio">
+      <label><input type="radio" id="park" name="parkRadio" value="MagicKingdom" onClick="selectPark()">Magic Kingdom</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" id="park" name="parkRadio" value="Epcot" onClick="selectPark()">EPCOT</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" id="park" name="parkRadio" value="AnimalKingdom" onClick="selectPark()">Animal Kingdom</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" id="park" name="parkRadio" value="HollywoodStudios" onClick="selectPark()">Hollywood Studios</label>
+    </div>
+  </div>
+  <div id="attractionSelect">
+  </div>
+  <div id="waitTimeDisplay">
+  </div>
+
+
+
+  <% include partials/footer %>

@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS attraction CASCADE;
 -- create the table
 CREATE TABLE attraction
 ( attraction_id              SERIAL         PRIMARY KEY
-, themepark_location         INTEGER        NOT NULL REFERENCES themepark(themepark_id)
+, themepark_id               INTEGER        NOT NULL REFERENCES themepark(themepark_id)
 , attraction_name            VARCHAR(60)    NOT NULL);
 
 -- Seed themepark table
@@ -57,12 +57,36 @@ VALUES
 
 -- Seed attraction table
 INSERT INTO attraction
-( themepark_location
+( themepark_id
 , attraction_name)
 VALUES
 ( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
 , 'Haunted Mansion')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'The Magic Carpets of Aladdin')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'The Many Adventures of Winnie the Pooh')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Tomorrowland Speedway')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Mad Tea Party')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Under the Sea - Journey of The Little Mermaid')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Astro Orbiter')
 ,
 ( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
@@ -81,8 +105,32 @@ VALUES
 , 'Seven Dwarfs Mine Train')
 ,
 ( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Pirates of the Caribbean')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Jungle Cruise')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Big Thunder Mountain Railroad')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, 'Dumbo the Flying Elephant')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldMagicKingdom')
+, E'Peter Pan\'s Flight')
+,
+( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldAnimalKingdom')
 , 'Expedition Everest - Legend of the Forbidden Mountain')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldAnimalKingdom')
+, 'Kilimanjaro Safaris')
 ,
 ( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldAnimalKingdom')
@@ -121,8 +169,16 @@ VALUES
 , 'Toy Story Mania!')
 ,
 ( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldHollywoodStudios')
+, 'Muppet*Vision 3D')
+,
+( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldEpcot')
 , E'Soarin\' Around the World')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldEpcot')
+, 'Frozen Ever After')
 ,
 ( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldEpcot')
@@ -135,6 +191,14 @@ VALUES
 ( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldEpcot')
 , 'Test Track')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldEpcot')
+, 'Gran Fiesta Tour Starring The Three Caballeros')
+,
+( (SELECT themepark_id FROM themepark
+   WHERE themepark_name = 'WaltDisneyWorldEpcot')
+, 'Journey Into Imagination With Figment')
 ,
 ( (SELECT themepark_id FROM themepark
    WHERE themepark_name = 'WaltDisneyWorldEpcot')
