@@ -1,4 +1,5 @@
 // required modules
+const { Client } = require('pg');
 var path = require('path');
 var express = require('express');
 var pg = require('pg');
@@ -25,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // set the port
 app.set('port', (process.env.PORT || 5000));
 
-
+/*
 // Read the DATABASE_URL environment variable and then parse it out. into the various parts.
 var db_url = url.parse(process.env.DATABASE_URL);
 
@@ -43,7 +44,12 @@ const client = new Client({
     database: db,
     password: pass
 });
+*/
 
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
 client.connect();
 
 /******************************************************************************
