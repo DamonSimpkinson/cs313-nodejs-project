@@ -86,8 +86,7 @@ while(timeNode.hasChildNodes()){
         var response = xhttp.responseText;
 
 // create html string to append to web page
-        var waitTime = "<h3>Your Wait time for " + $('input[name=attractionRadio]:checked').val() + " is:</h3>";
-        waitTime += "<h3>" + response + " Minutes</h3>";
+        var waitTime = "<h3>Your Wait time for " + $('input[name=attractionRadio]:checked').val() + " is: " + response + " Minutes</h3>";
 // append the html string
         $("#waitTimeDisplay").append(waitTime);
       }
