@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // set the port
 app.set('port', (process.env.PORT || 5000));
 
+// connect to database
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: true,
