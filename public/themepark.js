@@ -40,10 +40,7 @@ function selectPark() {
 // create an html string to append to the appropriate div inside our web page
       var attractionList = "<h3>Select an attraction from the options below:</h3>";
       for (var i = 0; i < response.length; i++) {
-        if(response[i].indexOf("'") >= 0) {
-          continue;
-        }
-        attractionList += "<div class='radio'><label><input type='radio' id='attraction' name='attractionRadio' value='" + response[i] + "' onClick='selectAttraction()'>" + response[i] + "</label></div>";
+        attractionList += '<div class="radio"<label><input type="radio" id="attraction" name="attractionRadio" value="' + response[i] + '" onClick="selectAttraction()">' + response[i] + '</label></div>';
       }
 
 // append the html code to our document
