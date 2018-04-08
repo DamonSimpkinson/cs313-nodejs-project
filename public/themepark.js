@@ -20,6 +20,7 @@ function selectPark() {
   var xhttp = new XMLHttpRequest();
 
 // build the URL to work on both the local machine and heroku
+// Next 3 lines borrowed from Ralph Borcherds because they are better than what I had
   var str = window.location.pathname;
   var base_url = str.slice(0, str.lastIndexOf("/"));
   var url = "//" + window.location.host + base_url + "/selectThemepark";
@@ -35,7 +36,6 @@ function selectPark() {
   xhttp.onreadystatechange = function() {
     if(xhttp.readyState == 4 && xhttp.status == 200) {
       var response = JSON.parse(xhttp.responseText);
-      var input;
 
 // create an html string to append to the appropriate div inside our web page
       var attractionList = "<h3>Select an attraction from the options below:</h3>";

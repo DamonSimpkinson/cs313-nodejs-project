@@ -119,21 +119,3 @@ function getAttractions(park){
     }
   })
 }
-
-
-/*
-function getWaitTime(attraction){
-  myThemepark.GetWaitTimes().then(function(rides){
-    // print each wait time
-    for(var i=0, ride; ride=rides[i++];) {
-//      console.log("ride: " + ride.name + " wait time: " + ride.waitTime);
-//      console.log("attraction: " + attraction + "   ride.name: " + ride.name);
-      if(ride.name == attraction) {
-        console.log("***********TRUE***********");
-        console.log(ride.waitTime);
-        time.push(ride.waitTime);
-      }
-    }
-  }, console.error);
-}
-*/
