@@ -62,6 +62,7 @@ app.get('/selectAttraction', function(req, res){
     // select correct ride from API array
     for(var i=0, ride; ride=rides[i++];) {
       if(ride.name.trim() == attraction) {
+        console.log(ride);
         res.json(ride.waitTime);
       }
     }

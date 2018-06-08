@@ -28,15 +28,18 @@ function selectPark() {
 // get the value of the radio button that was checked and apply to params to be passed
   var park = $('input[name=parkRadio]:checked').val();
   var params = '?park=' + park;
+  console.log(url + params);
 
 // call to server
   xhttp.open("GET", url + params, true);
 
 // once server replies with data update the webpage with the list of attractions
   xhttp.onreadystatechange = function() {
+    console.log("ready state is - " + xhttp.readyState + " and status is - " + xhttp.status);
     if(xhttp.readyState == 4 && xhttp.status == 200) {
+      console.log("Doing stuff now");
       var response = JSON.parse(xhttp.responseText);
-      var input;
+//      var input;
 
 // create an html string to append to the appropriate div inside our web page
       var attractionList = "<h3>Select an attraction from the options below:</h3>";
